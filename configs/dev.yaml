@@ -1,0 +1,33 @@
+service:
+  name: quant
+  version: v1.0.0
+server:
+  http:
+    address: 0.0.0.0:8033
+    timeout: 1000s
+  grpc:
+    address: 0.0.0.0:9033
+    timeout: 1000s
+data:
+  database:
+    driver: mysql
+    source: root:123456@localhost/quant?charset=utf8&parseTime=true
+    logLevel: 4
+    timeout: 10s
+  redis:
+    addr: 127.0.0.1:6379
+    dial_timeout: 0.1s
+    read_timeout: 0.2s
+    write_timeout: 0.2s
+  csv:
+    path: /Users/test/Documents/data
+migrate:
+  version: 1
+  source: file://./migrations
+  path: ./migrations
+  database: mysql://root:123456@tcp(127.0.0.1:3306)/quant?charset=utf8mb4&parseTime=True&loc=Local
+markets:
+  - exchange: okex
+    market: futures
+  - exchange: binance
+    market: futures

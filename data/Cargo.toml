@@ -1,0 +1,33 @@
+[package]
+name = "data"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { workspace = true }
+async-trait = { workspace = true }
+ecode = { workspace = true }
+log = { workspace = true }
+api = { workspace = true }
+serde = { workspace = true }
+
+# orm
+sea-orm = { workspace = true }
+
+# clickhouse
+clickhouse-rs = { workspace = true }
+chrono = { workspace = true }
+futures-util = "0.3.30"
+
+# redis
+redis = { workspace = true }
+
+# snowflake
+rs-snowflake = "0.6.0"
+
+# decimal
+rust_decimal = { workspace = true }
+rust_decimal_macros = { workspace = true }
+
+# valid
+validator = { version = "0.16", features = ["derive"] }

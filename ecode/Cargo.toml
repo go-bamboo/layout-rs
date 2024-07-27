@@ -1,0 +1,20 @@
+[package]
+name = "ecode"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# error
+thiserror = { version = "1.0.40" }
+anyhow = { version = "1.0.71", features = ["backtrace"] }
+tokio = { workspace = true }
+redis = { workspace = true }
+sea-orm = { workspace = true }
+clickhouse-rs = { workspace = true }
+hyper = { workspace = true }
+tonic = { workspace = true }
+polars = { workspace = true }
+ta = { workspace = true }
+rust_decimal = { workspace = true }
